@@ -11,10 +11,9 @@ PROTOTYPES: DISABLE
 
 BOOT:
 #if (PERL_VERSION >= 14)
-    fprintf(stderr, "hello 5.14\n"); fflush(stderr);
     sv_setpv((SV*)GvCV(gv_fetchpvs("Array::Shuffle::shuffle_array", 0, SVt_PVCV)), "+");
 #else
-    sv_setpv((SV*)GvCV(gv_fetchpvs("Array::Shuffle::shuffle_array", 0, SVt_PVCV)), "+");
+    sv_setpv((SV*)GvCV(gv_fetchpvs("Array::Shuffle::shuffle_array", 0, SVt_PVCV)), "\[%@]");
 #endif
 
 void
