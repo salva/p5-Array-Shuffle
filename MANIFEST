@@ -1,0 +1,8 @@
+Changes
+Makefile.PL
+MANIFEST
+ppport.h
+README
+Shuffle.xs
+t/Array-Shuffle.t
+lib/Array/Shuffle.pm
