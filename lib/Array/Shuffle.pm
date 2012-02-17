@@ -10,7 +10,7 @@ XSLoader::load('Array::Shuffle', $VERSION);
 
 require Exporter;
 our @ISA = qw(Exporter);
-our @EXPORT_OK = qw(shuffle_array);
+our @EXPORT_OK = qw(shuffle_array shuffle_huge_array);
 
 1;
 __END__
@@ -26,8 +26,29 @@ Array::Shuffle - fast shuffling of arrays in-place
 
 =head1 DESCRIPTION
 
-This module implements the C<shuffle_array> function for shuffling and
-array in-place.
+This module provide some functions for shuffling arrays in-place
+efficiently.
+
+=head2 API
+
+=over 4
+
+=item shuffle_array @a
+
+Shuffles the given array in-place using the Fisher-Yates algorithm that
+is O(N).
+
+=item shuffle_huge_array @a
+
+Shuffles the given array in-place using an algorithm that is O(NlogN)
+but more cache friendly than Fisher-Yates. In some extreme cases, when
+shuffling huge arrays that do not find in the available RAM it may
+perform better.
+
+You would like to do some benchmarking to find out which one is better
+suited for your particular case.
+
+=back
 
 =head1 SEE ALSO
 

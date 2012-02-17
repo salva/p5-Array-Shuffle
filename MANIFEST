@@ -1,8 +1,10 @@
 Changes
+lib/Array/Shuffle.pm
 Makefile.PL
 MANIFEST
 ppport.h
 README
+samples/benchmark.pl
 Shuffle.xs
 t/Array-Shuffle.t
-lib/Array/Shuffle.pm
+t/pods.t

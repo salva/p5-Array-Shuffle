@@ -1,18 +1,17 @@
-# Before `make install' is performed this script should be runnable with
-# `make test'. After `make install' it should work as `perl Array-Shuffle.t'
-
-#########################
-
-# change 'tests => 1' to 'tests => last_test_to_print';
+#!/usr/bin/perl
 
 use strict;
 use warnings;
 
-use Test::More tests => 1;
-BEGIN { use_ok('Array::Shuffle') };
+use Test::More tests => 2000;
+use Array::Shuffle qw(shuffle_array shuffle_huge_array);
 
-#########################
-
-# Insert your test code below, the Test::More module is use()ed here so read
-# its man page ( perldoc Test::More ) for help writing this test script.
-
+my (@a, @b);
+for my $n (1..1000) {
+    push @a, $n;
+    push @b, $n;
+    shuffle_array @b;
+    is("@a", join(" ", sort { $a <=> $b } @b));
+    shuffle_huge_array @b;
+    is("@a", join(" ", sort { $a <=> $b } @b));
+}
