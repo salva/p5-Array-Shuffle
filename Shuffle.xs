@@ -48,8 +48,8 @@ BOOT:
     sv_setpv((SV*)GvCV(gv_fetchpvs("Array::Shuffle::shuffle_array", 0, SVt_PVCV)), "+");
     sv_setpv((SV*)GvCV(gv_fetchpvs("Array::Shuffle::shuffle_huge_array", 0, SVt_PVCV)), "+");
 #else
-    sv_setpv((SV*)GvCV(gv_fetchpvs("Array::Shuffle::shuffle_array", 0, SVt_PVCV)), "\@");
-    sv_setpv((SV*)GvCV(gv_fetchpvs("Array::Shuffle::shuffle_huge_array", 0, SVt_PVCV)), "\@");
+    sv_setpv((SV*)GvCV(gv_fetchpvs("Array::Shuffle::shuffle_array", 0, SVt_PVCV)), "\\@");
+    sv_setpv((SV*)GvCV(gv_fetchpvs("Array::Shuffle::shuffle_huge_array", 0, SVt_PVCV)), "\\@");
 #endif
 
 void

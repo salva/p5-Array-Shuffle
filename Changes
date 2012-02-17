@@ -1,5 +1,8 @@
 Revision history for Perl extension Array::Shuffle.
 
+0.02  Feb 17, 2012
+      - solve some problems with old perls
+
 0.01  Thu Feb 16 12:54:06 2012
 	- original version; created by h2xs 1.23 with options
 		-An Array::Shuffle

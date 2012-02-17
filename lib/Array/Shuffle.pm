@@ -1,6 +1,6 @@
 package Array::Shuffle;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use strict;
 use warnings;
@@ -55,7 +55,10 @@ suited for your particular case.
 
 =head1 SEE ALSO
 
-L<List::Util>
+L<List::Util>.
+
+The following thread on PerlMonks for a discussion on the topic:
+L<http://perlmonks.org/?node_id=953607>.
 
 =head1 COPYRIGHT AND LICENSE
 

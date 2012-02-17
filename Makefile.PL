@@ -1,4 +1,4 @@
-use 5.014002;
+
 use ExtUtils::MakeMaker;
 
 WriteMakefile( NAME          => 'Array::Shuffle',

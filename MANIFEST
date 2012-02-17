@@ -8,3 +8,4 @@ samples/benchmark.pl
 Shuffle.xs
 t/Array-Shuffle.t
 t/pods.t
+samples/stats.pl
