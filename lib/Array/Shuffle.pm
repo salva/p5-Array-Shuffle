@@ -38,6 +38,9 @@ efficiently.
 Shuffles the given array in-place using the Fisher-Yates algorithm that
 is O(N).
 
+This function is an order of magnitude faster than the shuffle
+function from L<List::Util>.
+
 =item shuffle_huge_array @a
 
 Shuffles the given array in-place using an algorithm that is O(NlogN)
