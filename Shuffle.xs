@@ -59,7 +59,7 @@ shuffle_array(av)
 CODE:
     if (SvREADONLY(av))
         Perl_croak(aTHX_ "can't shuffle a read only array");
-    if (SvTIED_mg((SV *)av, PERL_MAGIC_tied)) {
+    if (SvMAGICAL((SV *)av)) {
         IV i;
         for (i = av_len(av); i > 0; i--) {
             NV d = Drand01();
@@ -89,7 +89,7 @@ PREINIT:
 CODE:
     if (SvREADONLY(av))
         Perl_croak(aTHX_ "can't shuffle a read only array");
-    if (SvTIED_mg((SV *)av, PERL_MAGIC_tied))
+    if (SvMAGICAL((SV *)av))
         Perl_croak(aTHX_ "shuffle_huge_array can not handle arrays with magic attached");
     p = AvARRAY(av);
     shuffle_huge_array(p, p + av_len(av));
