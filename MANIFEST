@@ -5,7 +5,8 @@ MANIFEST
 ppport.h
 README
 samples/benchmark.pl
+samples/stats.pl
 Shuffle.xs
 t/Array-Shuffle.t
 t/pods.t
-samples/stats.pl
+t/tied.t
