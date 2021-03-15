@@ -1,6 +1,6 @@
 package Array::Shuffle;
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 use strict;
 use warnings;
@@ -41,6 +41,12 @@ is O(N).
 This function is an order of magnitude faster than the shuffle
 function from L<List::Util>.
 
+Note: that was true a long, long, long time ago. If you are worried
+about performance, you should check it for yourself.
+
+In most cases you should probably use L<List::Utils/shuffle> instead
+of this obscure module!
+
 =item shuffle_huge_array @a
 
 Shuffles the given array in-place using an algorithm that is O(NlogN)
@@ -62,7 +68,7 @@ L<http://perlmonks.org/?node_id=953607>.
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2012 by Salvador FandiE<ntilde>o (sfandino@yahoo.com)
+Copyright (C) 2012, 2021 by Salvador FandiE<ntilde>o (sfandino@yahoo.com)
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.14.2 or,
